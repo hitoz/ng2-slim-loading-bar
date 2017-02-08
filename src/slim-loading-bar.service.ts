@@ -122,17 +122,23 @@ export class SlimLoadingBarService {
 
             let increment = 0;
 
-            if (this.progress >= 0 && this.progress < 25)
+            if (this.progress >= 0 && this.progress < 25) {
                 increment = (Math.random() * (5 - 3 + 1) + 3) / 100;
-            else if (this.progress >= 25 && this.progress < 65)
+            }
+            else if (this.progress >= 25 && this.progress < 65) {
                 increment = (Math.random() * 3) / 100;
-            else if (this.progress >= 65 && this.progress < 90)
+            }
+            else if (this.progress >= 65 && this.progress < 90) {
                 increment = (Math.random() * 2) / 100;
-            else if (this.progress >= 90 && this.progress < 99)
+            }
+            else if (this.progress >= 90 && this.progress < 99) {
                 increment = 0.5;
-            else
-                if (onCompleted !== null)
+            }
+            else {
+                if (onCompleted !== null) {
                     this.progress = 100;
+                }
+            }
 
             this.progress += increment;
 
