@@ -33,7 +33,7 @@ export class SlimLoadingBarService {
     private _visible:boolean = true;
 
     private _intervalCounterId:any = 0;
-    public interval:number = 500; // in milliseconds
+    public interval:number = 10; // in milliseconds
 
     constructor(public events: EventEmitter<SlimLoadingBarEvent>) {}
 
@@ -123,16 +123,16 @@ export class SlimLoadingBarService {
             let increment = 0;
 
             if (this.progress >= 0 && this.progress < 25) {
-                increment = (Math.random() * (5 - 3 + 1) + 3) / 100;
+                increment = (Math.random() * 3 + 2) / 10;
             }
             else if (this.progress >= 25 && this.progress < 65) {
-                increment = (Math.random() * 3) / 100;
+                increment = (Math.random() * 2) / 10;
             }
             else if (this.progress >= 65 && this.progress < 90) {
-                increment = (Math.random() * 2) / 100;
+                increment = (Math.random()) / 10;
             }
             else if (this.progress >= 90 && this.progress < 99) {
-                increment = 0.5;
+                increment = (Math.random()) / 50;
             }
             else {
                 if (onCompleted !== null) {
