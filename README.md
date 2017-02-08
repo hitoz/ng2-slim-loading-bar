@@ -1,12 +1,24 @@
-# Angular 2 Slim Loading Bar [![npm version](https://img.shields.io/npm/v/ng2-slim-loading-bar.svg)](https://www.npmjs.com/package/ng2-slim-loading-bar) [![npm monthly downloads](https://img.shields.io/npm/dm/ng2-slim-loading-bar.svg?style=flat-square)](https://www.npmjs.com/package/ng2-slim-loading-bar)
+# Angular 2 Slim Loading Bar [![npm version](https://img.shields.io/npm/v/ng2-slim-progress-bar
+.svg)](https://www.npmjs.com/package/ng2-slim-progress-bar
+) [![npm monthly downloads](https://img.shields.io/npm/dm/ng2-slim-progress-bar
+.svg?style=flat-square)](https://www.npmjs.com/package/ng2-slim-progress-bar
+)
 Angular2 component shows slim loading bar at the top of the page of your application.
 
-[![Build Status](https://travis-ci.org/akserg/ng2-slim-loading-bar.svg?branch=master)](https://travis-ci.org/akserg/ng2-slim-loading-bar) 
+[![Build Status](https://travis-ci.org/akserg/ng2-slim-progress-bar
+.svg?branch=master)](https://travis-ci.org/akserg/ng2-slim-progress-bar
+) 
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release) 
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) 
-[![Dependency Status](https://david-dm.org/akserg/ng2-slim-loading-bar.svg)](https://david-dm.org/akserg/ng2-slim-loading-bar)
-[![devDependency Status](https://david-dm.org/akserg/ng2-slim-loading-bar/dev-status.svg)](https://david-dm.org/akserg/ng2-slim-loading-bar#info=devDependencies)
-[![Known Vulnerabilities](https://snyk.io/test/github/akserg/ng2-slim-loading-bar/badge.svg)](https://snyk.io/test/github/akserg/ng2-slim-loading-bar)
+[![Dependency Status](https://david-dm.org/akserg/ng2-slim-progress-bar
+.svg)](https://david-dm.org/akserg/ng2-slim-progress-bar
+)
+[![devDependency Status](https://david-dm.org/akserg/ng2-slim-progress-bar
+/dev-status.svg)](https://david-dm.org/akserg/ng2-slim-progress-bar
+#info=devDependencies)
+[![Known Vulnerabilities](https://snyk.io/test/github/akserg/ng2-slim-progress-bar
+/badge.svg)](https://snyk.io/test/github/akserg/ng2-slim-progress-bar
+)
 
 Follow me [![twitter](https://img.shields.io/twitter/follow/akopkokhyants.svg?style=social&label=%20akopkokhyants)](https://twitter.com/akopkokhyants) to be notified about new releases.
 
@@ -15,11 +27,13 @@ _Some of these APIs and Components are not final and are subject to change!_
 ## Installation
 
 ```sh
-npm install ng2-slim-loading-bar --save
+npm install ng2-slim-progress-bar
+ --save
 ```
 
 ## Demo
-Simple examples using ng2-slim-loading-bar:
+Simple examples using ng2-slim-progress-bar
+:
 - with SystemJS in [ng2-systemjs-demo](https://github.com/akserg/ng2-systemjs-demo)
 - with Webpack in [ng2-webpack-demo](https://github.com/akserg/ng2-webpack-demo)
 
@@ -32,14 +46,18 @@ If you use SystemJS to load your files, you might have to update your config:
 ```js
 System.config({
     map: {
-        'ng2-slim-loading-bar': 'node_modules/ng2-slim-loading-bar/bundles/index.umd.js'
+        'ng2-slim-progress-bar
+': 'node_modules/ng2-slim-progress-bar
+/bundles/index.umd.js'
     }
 });
 ```
 
 #### 1. Update the markup
 - Import the `style.css` into your web page
-- Add `<ng2-slim-loading-bar></ng2-slim-loading-bar>` tag in template of your application component.
+- Add `<ng2-slim-progress-bar
+></ng2-slim-progress-bar
+>` tag in template of your application component.
 
 #### 2. Import the `SlimLoadingBarModule`
 Import `SlimLoadingBarModule.forRoot()` in the NgModule of your application. 
@@ -48,7 +66,8 @@ The `forRoot` method is a convention for modules that provide a singleton servic
 ```ts
 import {BrowserModule} from "@angular/platform-browser";
 import {NgModule} from '@angular/core';
-import {SlimLoadingBarModule} from 'ng2-slim-loading-bar';
+import {SlimLoadingBarModule} from 'ng2-slim-progress-bar
+';
 
 @NgModule({
     imports: [
@@ -77,11 +96,13 @@ export class SharedModule {
 ```
 
 #### 3. Use the `SlimLoadingBarService` for your application
-- Import `SlimLoadingBarService` from `ng2-slim-loading-bar` in your application code:
+- Import `SlimLoadingBarService` from `ng2-slim-progress-bar
+` in your application code:
 
 ```js
 import {Component} from '@angular/core';
-import {SlimLoadingBarService} from 'ng2-slim-loading-bar';
+import {SlimLoadingBarService} from 'ng2-slim-progress-bar
+';
 
 @Component({
     selector: 'app',
@@ -90,7 +111,9 @@ import {SlimLoadingBarService} from 'ng2-slim-loading-bar';
         <button (click)="startLoading()">Start Loading</button>
         <button (click)="stopLoading()">Stop Loading</button>
         <button (click)="completeLoading()">Complete Loading</button>
-        <ng2-slim-loading-bar></ng2-slim-loading-bar>
+        <ng2-slim-progress-bar
+></ng2-slim-progress-bar
+>
     `
 })
 export class AppComponent {
@@ -113,14 +136,18 @@ export class AppComponent {
 }
 ```
 
-#### 3. Customize the the `ng2-slim-loading-bar` for your application
-You can use the following properties to customize the `ng2-slim-loading-bar` component in your template:
+#### 3. Customize the the `ng2-slim-progress-bar
+` for your application
+You can use the following properties to customize the `ng2-slim-progress-bar
+` component in your template:
 - `color` - The color of loading bar. Default is `firebrick`. Any CSS compatible value.
 - `height` - The height of loading bar. Default value is `2px`.
 - `show` - The flag helps hide and show the loading bar. Devault value is `true`.
 
 Example: 
-`<ng2-slim-loading-bar [color]="'blue'" [height]="'4px'"></ng2-slim-loading-bar>`
+`<ng2-slim-progress-bar
+ [color]="'blue'" [height]="'4px'"></ng2-slim-progress-bar
+>`
 
 #### 4. Manage the loading bar
 You can use the following properties to customize the SlimLoadingBar via instance of SlimLoadingBarService:
@@ -130,6 +157,7 @@ You can use the following properties to customize the SlimLoadingBar via instanc
 
 You can use the following methods to control the SlimLoadingBar via instance of SlimLoadingBarService:
 - `start` - Start the loading progress. Use the callback function as an parameter to listed the complete event.
+- `startIncrease` - Start the loading progress with automatically slow down the increment. Use the callback function as an parameter to listed the complete event or it will stop on 99%.
 - `stop` - Stop the loading progress. This method pause the current position of loading progress.
 - `reset`- Reset the position of loading progress to 0.
 - `complete` - Set the progress to 100% and hide the progress bar.
